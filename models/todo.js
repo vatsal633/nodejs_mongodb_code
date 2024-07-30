@@ -3,7 +3,10 @@ import mongoose from "mongoose";
 const todoSchema = new mongoose.Schema({
     title: String,
     desc : String,
-    isdone : Boolean
+    isdone : Boolean,
+    days:Number
 });
 
-export const kitten = mongoose.model("todo",todoSchema)
+const Todo = mongoose.model("Todo",todoSchema)
+
+export default Todo
